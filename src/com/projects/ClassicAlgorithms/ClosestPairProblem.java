@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
+/*
+ * sample inputs {2, 3}, {12, 30}, {40, 50}, {5, 1}, {12, 10}, {3, 4}
+ */
 class Points
 {
 	public static final Comparator<Points> X_ORDER = new XOrder();
@@ -53,10 +56,10 @@ public class ClosestPairProblem {
 		int N = sc.nextInt();
 		Points point[] = new Points[N];
 		System.out.println("Enter x,y points :");
-		for(int i =0 ;i < N ;i++)
+		for(int i = 0 ;i < N ;i++)
 		{
-			double x = sc.nextInt();
-			double y =sc.nextInt();
+			double x = sc.nextDouble();
+			double y =sc.nextDouble();
 			point[i] = new Points(x,y);
 		}
 		
@@ -68,7 +71,7 @@ public class ClosestPairProblem {
 		Points px[] = new Points[n];
 		Points py[]= new Points[n];
 		
-		for(int i =0; i<n ;i++)
+		for(int i = 0; i<n ;i++)
 		{
 			px[i] = point[i];
 			py[i] = point[i];
@@ -76,7 +79,7 @@ public class ClosestPairProblem {
 		Arrays.sort(px, Points.X_ORDER);
 		Arrays.sort(py, Points.Y_ORDER);
 		
-		return closeUtil(px,py,n,0 ,n-1);
+		return closeUtil(px,py,n);
 		
 		
 		
@@ -112,14 +115,14 @@ public class ClosestPairProblem {
 	    return min;
 	}
 
-	private static float closeUtil(Points[] px, Points[] py, int n,int lo,int hi) {
+	private static float closeUtil(Points[] px, Points[] py, int n) {
 		// Recursive function to find minimum dist between points using array px which contains all the points sorted by x coordinate and py array containing all the points sorted by y coordiante
-		if (hi <= lo) return Float.POSITIVE_INFINITY;
+		
 		
 		if(n < 3)
 			return bruteForce(px,n);
 		
-		int mid = (lo + (hi -lo))/2;
+		int mid =n/2;
 		Points midPoint = px[mid];
 		
 		 Points Pyl[] = new Points[mid];   // y sorted points on left of vertical line
@@ -135,8 +138,8 @@ public class ClosestPairProblem {
 		    // Consider the vertical line passing through the middle point
 		    // calculate the smallest distance dl on left of middle point and
 		    // dr on right side
-		    float dl = closeUtil(px, Pyl, n ,lo, mid);
-		    float dr = closeUtil(px, Pyr, n , mid+1, hi);
+		    float dl = closeUtil(px, Pyl,mid );
+		    float dr = closeUtil(px, Pyr, n-mid);
 		 // Find the smaller of two distances
 		    float d = min(dl, dr);
 		 

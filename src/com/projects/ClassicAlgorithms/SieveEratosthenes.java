@@ -32,14 +32,14 @@ public class SieveEratosthenes {
 			//strike off all the multiples of prime numbers in the list
 			if(arr[i] == 1)
 			{
-			for( int j = 2; j*i <= num ; j++)
+			for(int j = 2; j*i <= num ; j++)
 			{
 				arr[i*j] = 0;
 			}
 			}
 		}
 		//Print all the prime numbers upto given number 'num'
-		for(int i =0 ;i <= num ; i++)
+		for(int i = 0 ;i <= num ; i++)
 		{
 			if(arr[i] == 1)
 			{

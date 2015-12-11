@@ -11,33 +11,33 @@ public class SortingAlgoMergeSort {
 
 	public static void mergeList(int[] left, int[] right, int[] Arr)
 	{
-		int nL=left.length;
-		int nR=right.length;
-		int i = 0,j = 0,k=0;
-		while((i<nL) && (j < nR))
+		int nL = left.length;
+		int nR = right.length;
+		int i = 0,j = 0,k = 0;
+		while((i < nL) && (j < nR))
 		{
-			if(left[i]<right[j])
+			if(left[i] < right[j])
 			{
-				Arr[k]=left[i];
+				Arr[k] = left[i];
 				i++;
 				k++;
 			}
 			else 
 			{
-					Arr[k]=right[j];
+					Arr[k] = right[j];
 					j++;
 					k++;
 				}
 			}
-		while(i<nL)
+		while(i < nL)
 		{
-			Arr[k]=left[i];
+			Arr[k] = left[i];
 			i++;
 			k++;
 		}
-		while(j<nR)
+		while(j < nR)
 		{
-			Arr[k]=right[j];
+			Arr[k] = right[j];
 			j++;
 			k++;
 		}
@@ -49,9 +49,9 @@ public class SortingAlgoMergeSort {
 		int num = sc.nextInt();
 		int[] Arr = new int[num];
 		System.out.println("Enter the elements now :");
-		for(int i =0; i<num ;i++)
+		for(int i = 0; i < num ;i++)
 		{
-        Arr [i] = sc.nextInt();	
+        Arr[i] = sc.nextInt();	
 		}
 		System.out.println("Elements before merge sort");
 		for(int a: Arr)
@@ -72,20 +72,20 @@ public class SortingAlgoMergeSort {
 		
 		int N = Arr.length;
 		int mid = N/2;
-		if(N<2)
+		if(N < 2)
 		{
 			return;
 		}
 		System.out.println(mid);
 		int[] left = new int[mid];
 	    int[] right = new int[N-mid];
-		for(int i = 0;i<mid;i++)
+		for(int i = 0;i < mid; i++)
 		{
-			left[i]=Arr[i];
+			left[i] = Arr[i];
 		}
-		for(int i = mid; i<=N-1;i++)
+		for(int i = mid; i <= N - 1;i++)
 		{
-			right[i-mid]=Arr[i];
+			right[i-mid] = Arr[i];
 		}	
 		
 		

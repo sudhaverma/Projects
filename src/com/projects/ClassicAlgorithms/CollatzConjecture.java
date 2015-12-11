@@ -3,7 +3,8 @@ package com.projects.ClassicAlgorithms;
 import java.util.Scanner;
 
 /**
- * Collatz Conjecture - Start with a number n > 1. Find the number of steps it takes to reach one using the following process: If n is even, divide it by 2. If n is odd, multiply it by 3 and add 1.
+ * Collatz Conjecture - Start with a number n > 1. Find the number of steps it takes to reach one using the following process: 
+ * If n is even, divide it by 2. If n is odd, multiply it by 3 and add 1.
  * @author sudha
  *
  */
@@ -25,19 +26,18 @@ public class CollatzConjecture {
 		int stepcount= 0;
 		while(num != 1)
 		{
-		if (num % 2==0)
-		{
-			num = num/2;
-			System.out.println(num);
-			stepcount++;
-		}
-		else
-		{
-			num = 3*num + 1;
-			System.out.println(num);
-			stepcount++;
-			
-		}
+			if (num%2==0)
+			{
+				num = num/2;
+				System.out.println(num);
+				stepcount++;
+			}
+			else
+			{
+				num = 3*num + 1;
+				System.out.println(num);
+				stepcount++;
+			}
 		}
 		return stepcount;
 	}

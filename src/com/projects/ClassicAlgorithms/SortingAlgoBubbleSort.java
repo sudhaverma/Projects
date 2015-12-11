@@ -13,7 +13,7 @@ public class SortingAlgoBubbleSort {
 		System.out.println("Enter the elements :");
 		for(int i = 0; i < num; i++)
 		{
-			A[i] =sc.nextInt();
+			A[i] = sc.nextInt();
 		}
 		sort(A);
 		System.out.println("Sorted elements using Bubble sort");

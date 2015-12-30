@@ -7,7 +7,7 @@ package com.projects.Text;
 
 import java.util.Scanner;
 
-public class CeasarCipher {
+public class CaesarCipher {
 
 	public static void main(String args[])
 	{
@@ -16,7 +16,7 @@ public class CeasarCipher {
 		String plainText = sc.nextLine();
 		System.out.println("Enter the offset value for encryption");
 		int offset = sc.nextInt();
-		String encryptedString = encryptString(plainText,offset);
+		String encryptedString = encryptString(plainText, offset);
 		System.out.println("After encryption ->"+ encryptedString);
 		String decryptedString = decryptString(encryptedString , offset);
 		System.out.println("Decrypted String is "+decryptedString);
@@ -24,8 +24,6 @@ public class CeasarCipher {
 
 	private static String decryptString(String encryptedString, int offset) {
 		// decrypts the given encrytedString to plaintext
-		
-		
 		return encryptString(encryptedString, 26-offset);
 	}
 
@@ -34,16 +32,16 @@ public class CeasarCipher {
 		 offset = offset % 26 + 26;
 		String encryptedString = "";
 		int len = encryptedString2.length();
-		for(int i = 0 ;i < len ; i++)
+		for(int i = 0 ; i < len ; i++)
 		{
 			char ch = encryptedString2.charAt(i);
 			if(Character.isUpperCase(ch))
 			{
-				encryptedString += ((char)('A'+ (ch - 'A' + offset)% 26));
+				encryptedString += ((char)('A'+ (ch - 'A' + offset) % 26));
 			}
 			else if (Character.isLowerCase(ch))
 			{
-				encryptedString += ((char)('a' + (ch - 'a' + offset)% 26));
+				encryptedString += ((char)('a' + (ch - 'a' + offset) % 26));
 			}
 					
 		}

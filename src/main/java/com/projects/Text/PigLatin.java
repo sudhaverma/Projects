@@ -14,7 +14,7 @@ public class PigLatin {
 	{
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the english word :");
-		String str =sc.nextLine();
+		String str = sc.nextLine();
 		convertToPigLatin(str);
 	}
 
@@ -26,18 +26,17 @@ public class PigLatin {
 		for(int i = 0;i < len-1; i++)
 		{
 			char ch = str.charAt(i);
-			if(( ch == 'a') || (ch =='e') || (ch =='i') || (ch =='o') || (ch =='u') || (ch == 'A')|| (ch == 'E') || (ch == 'I') ||(ch == 'O') || (ch == 'U'))
+			if(( ch == 'a') || (ch == 'e') || (ch == 'i') || (ch == 'o') || (ch == 'u') || (ch == 'A')|| (ch == 'E') || (ch == 'I') ||(ch == 'O') || (ch == 'U'))
 			{
-			
 				place = i;
 				break;
 			
 			}
 		}	
 			if (place != -1) {
-				String s = str.substring(place);
-				String res = str.substring(0, place);
-				 result = s+res+"ay";
+				String s = str.substring(place); //extracting all alphabets in the word beginning from the 1st vowel
+				String res = str.substring(0, place); //extracting the alphabets present before the first vowel
+				 result = s + res + "ay"; // adding 'ay' at the end of the words
 				 System.out.println("Pig Latin for the given word is "+result);
 			} else {
 				System.out.println("No PigLatin for this word ");

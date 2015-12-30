@@ -1,4 +1,4 @@
-package com.projects.numbers;
+package com.projects.Numbers;
 
 import java.util.Scanner;
 
@@ -25,7 +25,6 @@ public class FibonacciN {
 		do
 		{
 		System.out.println("Please enter a number for generating fibonnaci series ");
-		
 		int number = sc.nextInt();
 		long result = 0;
 		

@@ -23,10 +23,10 @@ public class CollatzConjecture {
 
 	private static int findStepForCollatz(int num) {
 		// Checks whether the number is even or odd and then based on it calculates steps to reach 1 from that number
-		int stepcount= 0;
+		int stepcount = 0;
 		while(num != 1)
 		{
-			if (num%2==0)
+			if (num%2 == 0)
 			{
 				num = num/2;
 				System.out.println(num);
@@ -34,7 +34,7 @@ public class CollatzConjecture {
 			}
 			else
 			{
-				num = 3*num + 1;
+				num = 3 *num + 1;
 				System.out.println(num);
 				stepcount++;
 			}

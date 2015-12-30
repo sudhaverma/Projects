@@ -16,8 +16,9 @@ public class SieveEratosthenes {
 		int num = sc.nextInt();
 		findPrime(num);
 	}
-//this function has the time complexity of O(N(log(logN)) and space complexity is O(N)
+
 	private static void findPrime(int num) {
+		//this function has the time complexity of O(N(log(logN)) and space complexity is O(N)
 		// prints all the prime numbers upto 'num'
 		int[] arr = new int[num+1];
 		for(int i = 0 ; i <= num ; i++)

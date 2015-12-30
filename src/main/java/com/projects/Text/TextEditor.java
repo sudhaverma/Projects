@@ -21,9 +21,7 @@ import javax.swing.text.JTextComponent;
 import javax.swing.text.html.HTMLEditorKit;
 public class TextEditor {
 
-
-
-	    public static void main(String args[]) {
+	  public static void main(String args[]) {
 
 	  final String inputFilePath = "/Users/sudha/output.txt";
 
@@ -42,11 +40,6 @@ public class TextEditor {
 	  JPanel jPanel = new JPanel();
 
 	  Action Load = new AbstractAction() {
-
-	@Override
-	/*
-	 * Action performed when save button gets clicked
-	 */
 
 	public void actionPerformed(ActionEvent event) {
 
@@ -74,8 +67,6 @@ public class TextEditor {
  */
 	  Action absActionSave = new AbstractAction() {
 
-	@Override
-
 	public void actionPerformed(ActionEvent event) {
 
 	    try {
@@ -100,7 +91,7 @@ public class TextEditor {
 
 	  Action absActionClear = new AbstractAction() {
 
-	@Override
+	
 	/*
 	 * Action performed when clear button gets clicked
 	 */

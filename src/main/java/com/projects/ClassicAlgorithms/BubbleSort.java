@@ -1,8 +1,13 @@
 package com.projects.ClassicAlgorithms;
 
 import java.util.Scanner;
+/**
+ *  Implementation of sorting algorithms: bubble sort.
+ * @author sudha
+ *
+ */
 
-public class SortingAlgoBubbleSort {
+public class BubbleSort {
 
 	public static void main(String args[])
 	{
@@ -26,24 +31,24 @@ public class SortingAlgoBubbleSort {
 	private static void sort(int[] A) {
 		// bubble sort algorithm
 		int len = A.length;
-		for(int k = 1;k< len-1; k++)
+		for(int k = 1; k < len-1; k++)
 		{
-			int flag =0;
-			for(int j =0 ;j <len-2 ;j++)
+			int flag = 0;
+			for(int j =0 ;j < len-2 ;j++)
 			{
 				if(A[j] > A[j+1])
 				{
-					swap(A,j,j+1);
-					flag =1;
+					swap(A, j, j+1);
+					flag = 1;
 				}
 			}
-			if(flag ==0)
+			if(flag == 0)
 				break;
 		}
 		
 	}
 
-	private static void swap(int[]A,int i, int j) {
+	private static void swap(int[]A, int i, int j) {
 		int temp = A[i];
 		A[i] = A[j];
 		A[j] = temp;

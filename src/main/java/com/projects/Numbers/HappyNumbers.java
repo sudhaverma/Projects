@@ -1,4 +1,4 @@
-package com.projects.numbers;
+package com.projects.Numbers;
 
 import java.util.HashSet;
 /**
@@ -27,7 +27,7 @@ public class HappyNumbers{
  
    public static void main(String[] args){
 	   System.out.println("First 8 happy numbers are ->");
-       for(long number = 1,count = 0;count<8;number++){
+       for(long number = 1, count = 0; count < 8; number++){
            if(findHappy(number)){
                System.out.println(number);
                count++;

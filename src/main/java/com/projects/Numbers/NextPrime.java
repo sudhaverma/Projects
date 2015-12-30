@@ -1,7 +1,12 @@
-package com.projects.numbers;
+package com.projects.Numbers;
 
 import java.util.Scanner;
 
+/**
+ * Next Prime Number - Have the program find prime numbers until the user chooses to stop asking for the next one.
+ * @author sudha
+ *
+ */
 public class NextPrime {
 
 	public static void main(String args[])
@@ -11,16 +16,16 @@ public class NextPrime {
 		int limit = sc.nextInt();
 		System.out.println("Prime numbers are ");
 		findPrimes(limit);
-		
+		sc.close();
 	}
 
 	private static void findPrimes(int limit) {
-		// finds the prime number in Number System
-		//This function takes time complexity of O(n*Sqrt(n))
+		// Finds prime number in Number System
+		//This function takes time complexity of O(n*Sqrt(n)) where n is the number of elements in number system
 		String r = null;
 		do
 		{
-			for(int i= 2 ; i <=limit ; i++)
+			for(int i = 2 ; i <= limit ; i++)
 			{
 			boolean res = isPrime(i);
 			if(res)
@@ -37,7 +42,7 @@ public class NextPrime {
 
 	private static boolean isPrime(int num) {
 		// finds whether the given number is prime or not
-		for(int i=2 ;i <= Math.sqrt(num) ; i++)
+		for(int i = 2 ; i <= Math.sqrt(num) ; i++)
 		{
 			if(num % i == 0)
 				return false;

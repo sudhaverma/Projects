@@ -21,9 +21,9 @@ public class CountVowels {
 	private static void countVowels(String str) {
 		// returns the sum of each vowels found in the given text
 		int len = str.length();
-		int c1=0 ,c2 =0 , c3 =0 , c4 =0, c5=0 ;
+		int c1 = 0 ,c2 = 0 , c3 = 0 , c4 = 0, c5 = 0 ;
 		str = str.toLowerCase();
-		for(int i = 0 ;i < len-1 ; i++)
+		for(int i = 0 ; i < len-1 ; i++)
 		{
 			char  ch = str.charAt(i);
 			if(ch == 'a' )

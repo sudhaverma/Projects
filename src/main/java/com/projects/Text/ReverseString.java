@@ -10,7 +10,7 @@ public class ReverseString {
 		System.out.println("Enter the string to be reversed :");
 		String str = sc.nextLine();
 		String reversedString = reverse(str);
-		System.out.println("After reversing string is->"+reversedString.toString());
+		System.out.println("After reversing string is->"+ reversedString.toString());
 		sc.close();
 	}
 	public static String reverse(String str) {

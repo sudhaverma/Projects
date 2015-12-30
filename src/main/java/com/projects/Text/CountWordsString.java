@@ -15,8 +15,9 @@ public class CountWordsString {
 	{
 		System.out.println("Enter a string :");
 		Scanner sc = new Scanner(System.in);
-		String s =sc.nextLine();
+		String s = sc.nextLine();
 		countWords(s);
+		sc.close();
 	}
 
 	private static void countWords(String s) {
